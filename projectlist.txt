@@ -1,0 +1,31 @@
+Bali, South Asia, Asia
+Birari, South Asia, Asia
+CABTAL Capacity Building, Cameroon, Africa, CABTAL
+Cameroon General, Cameroon, Africa, CABTAL
+Donali, South Asia, Asia
+Duvai, South Asia, Asia
+Ethiopia General, Ethiopia, Africa
+Gaba, South Asia, Asia
+Gurija, South Asia, Asia
+Hapuma, South Asia, Asia
+Highland Asia General, Highland Asia, Asia
+Jam Ma Cluster, Cameroon, Africa, CABTAL
+Kabras, Kenya, Africa, BTL
+Kassin, South Asia, Asia
+Kenya General, Kenya, Africa
+Kudai, South Asia, Asia
+Kunama, Ethiopia, Africa, Wycliffe Ethiopia
+Mehra, Highland Asia, Asia
+Mfumte Cluster, Cameroon, Africa, CABTAL
+Moloko, Cameroon, Africa, CABTAL
+Nawila, East Africa, Africa
+Nirgam, South Asia, Asia
+Nomaande, Cameroon, Africa, CABTAL
+Nzime, Cameroon, Africa, CABTAL
+Rabas, South Asia, Asia
+Ring Road Cluster, Cameroon, Africa, CABTAL
+Sengwer Charangany, Kenya, Africa, BTL
+South Asia General, South Asia, Asia
+TBTA
+Wambra, Highland Asia, Asia
+Warka, South Asia, Asia
