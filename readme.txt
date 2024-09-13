@@ -60,9 +60,14 @@ pyinstaller --onefile --name=script jpgReTag.py
 
 How to create new exe with nuitka (pyinstaller exe seem to get flagged as virus):
 pip install nuitka
-python -m nuitka --product-name=script --product-version=1.13 --file-description=jpgReTagTool --enable-plugin=tk-inter --onefile -o script jpgReTag.py
+python -m nuitka --product-name=script --product-version=1.14 --file-description=jpgReTagTool --enable-plugin=tk-inter -o script jpgReTag.py
 
 Change History:
+v1.14
+Merge dropdown menuing into template creation.
+After template options via gui selected write the template csv, and prompt if image retagging should be executed
+If template csv found prompt if wishing to re-edit it
+If template csv used for retagging, rename to template-tagged.csv (its been used)
 v1.13
 Template.csv always to have Tag1 - Tag20 columns
 v1.12
