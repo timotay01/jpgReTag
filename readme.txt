@@ -60,7 +60,7 @@ pyinstaller --onefile --name=script jpgReTag.py
 
 How to create new exe with nuitka (pyinstaller exe seem to get flagged as virus):
 pip install nuitka
-python -m nuitka --product-name=script --product-version=1.14 --file-description=jpgReTagTool --enable-plugin=tk-inter -o script jpgReTag.py
+python -m nuitka --product-name=script --product-version=1.14 --file-description=jpgReTagTool --enable-plugin=tk-inter -standalone -o script jpgReTag.py
 
 Change History:
 v1.14
