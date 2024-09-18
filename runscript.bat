@@ -1,4 +1,3 @@
-:: Use this to debug if the script is crashing
-::jpgReTag.py -v
-script.exe -v
+:: Use -v to debug if the script is crashing
+jpgReTag.dist\script.exe
 pause

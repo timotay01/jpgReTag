@@ -3,7 +3,7 @@ Examines a csv file(s) (either comma or semicolon separated) for the following c
 Exported dominion csv typically do not have Description column
 Updates all matching jpg,jpeg,png files (based on the item id) which should exist in the filename in format: SomeFile-1234.jpg (id=1234)
 
-Simply run jpgReTag.exe and when prompted select the directory to retag all files in that directory.
+Simply run runscript.bat and when prompted select the directory to retag all files in that directory.
 If the directory contains a dominion exported .csv it will be used to determine which files from the id should be updated.
 If no .csv exists in the folder then tool will prompt if wishing to create a template .csv
 If a template .csv (with optional modifications) exists, then the FilePath rather than Item Id column identifies which files to update.
