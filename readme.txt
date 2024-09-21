@@ -1,7 +1,13 @@
-Examines a csv file(s) (either comma or semicolon separated) for the following columns:
+jpgReTag tool:
+Examines a dominion exported csv file(s) (either comma or semicolon separated) for the following columns:
 'Item Id', 'Description' 'Usage', (others EXCEPT 'FilePath' will be taken as tags)
-Exported dominion csv typically do not have Description column
-Updates all matching jpg,jpeg,png files (based on the item id) which should exist in the filename in format: SomeFile-1234.jpg (id=1234)
+Updates all matching jpg,jpeg,png files (based on the item id) existing in the filename in format: SomeFile-1234.jpg (id=1234)
+
+When to install the tool on a new pc the following 3 files and 1 folder should be downloaded:
+runscript.bat
+projectlist.txt
+taglist.txt
+jpgReTag.dist\*
 
 Simply run runscript.bat and when prompted select the directory to retag all files in that directory.
 If the directory contains a dominion exported .csv it will be used to determine which files from the id should be updated.
@@ -60,9 +66,13 @@ pyinstaller --onefile --name=script jpgReTag.py
 
 How to create new exe with nuitka (pyinstaller exe seem to get flagged as virus):
 pip install nuitka
-python -m nuitka --product-name=script --product-version=1.14 --file-description=jpgReTagTool --enable-plugin=tk-inter -standalone -o script jpgReTag.py
+create all files into jpgReTag.dist\ 
+python -m nuitka --product-name=script --product-version=1.15 --file-description=jpgReTagTool --enable-plugin=tk-inter --standalone -o script jpgReTag.py
+xcopy /e /k /h /i exiftool jpgReTag.dist\exiftool
 
 Change History:
+v1.15
+Fix actual image retagging (had testcode to skip in v1.14), move exiftool to subfolder to make things less confusing
 v1.14
 Merge dropdown menuing into template creation.
 After template options via gui selected write the template csv, and prompt if image retagging should be executed

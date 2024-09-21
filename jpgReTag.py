@@ -11,7 +11,7 @@ from colorama import init, Fore, Back, Style
 from csv import DictReader, DictWriter
 #requires: pyexiftool, pillow, defusedxml, colorama
 
-VERSION = "v1.14.0.0"
+VERSION = "v1.15.0.0"
 SUPPORTED_FILES = [".jpg", ".jpeg", ".png"]
 MAX_TAGS = 15
 colorPerm  = "blue"
@@ -180,19 +180,6 @@ class projTemplate:
         self.dropbox[2]['values'] = self.ExtraTags
         self.dropbox[2].set(self.ExtraTags[0])
 
-
-    #def projectSelect(self):
-    #    selected = self.dropbox[0].get()
-    #    self.PermTags = []
-    #    if selected != "None":
-    #        self.PermTags.append(selected)
-    #        self.PermTags.extend(self.Projects[selected])
-    #        #print("PermTags: {}".format(self.PermTags))
-    #        self.refreshPermTags()
-    #        self.refreshIndivTags()
-    #        self.showCurrentTags()
-    #        self.dropbox[0]['state'] = tkinter.DISABLED
-    #        self.dropBtn[0]['state'] = tkinter.DISABLED
 
 
     def getImage(self):
@@ -616,6 +603,7 @@ def main():
     init(autoreset=True)
     print(Style.BRIGHT + Fore.GREEN + "jpgReTag tool " + VERSION)
 
+
     isWinClick = False
     # If the program was started via the GUI (i.e. by double-clicking the executable),
     if (os.name == 'nt' and not 'PROMPT' in os.environ):
@@ -685,11 +673,10 @@ def main():
     print("Requesting {} files to update".format(len(tagsToUpdate)))
     print("Examining {} files".format(len(jpgFiles)))
 
-    with exiftool.ExifToolHelper() as et:
-        et.check_execute = False
+    toolDir = os.getcwd() + '/jpgReTag.dist/exiftool/exiftool.exe'
+    with exiftool.ExifToolHelper(auto_start=True, check_execute=False, check_tag_names=True, executable=toolDir) as et:
         for id in tagsToUpdate:
             print("{} : {}".format(id, tagsToUpdate[id]))
-            continue  #Timtest
 
             filePath = ""
             if id.startswith('T'):
