@@ -638,6 +638,8 @@ def main():
     if numCsvFiles == 0 or isTemplateCsv:
         if performTemplatePrompt(dir, isTemplateCsv):
             return  #Template created but nothing more to do
+        else:
+            csvFiles = glob.glob(dir + "/*.csv")
 
     #Check if any jpg file are actually PNG- if so rename them so they can properly be tagged
     for i in range(0, len(jpgFiles)):
